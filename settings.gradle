@@ -1,1 +1,1 @@
-include ':gestures'
+include ':gestures', ':canvas'
