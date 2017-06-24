@@ -1,190 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:gravity="center"
-    android:orientation="vertical"
-    tools:context="sample.kingja.canvas.MainActivity">
+    android:layout_height="match_parent">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="12dp"
-        android:gravity="center">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:orientation="vertical"
+                  android:padding="12dp">
 
-        <LinearLayout
-            android:layout_width="wrap_content"
+        <Button
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginRight="12dp"
-            android:gravity="center"
-            android:orientation="vertical">
+            android:layout_marginBottom="12dp"
+            android:onClick="goClipActivity"
+            android:text="clip"
+            android:textAllCaps="false"/>
 
-            <sample.kingja.canvas.CanvasView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_marginBottom="12dp"
-                android:background="#d9d9d9"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="原图"/>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
+        <Button
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:orientation="vertical">
-
-            <sample.kingja.canvas.ClipCanvasView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_marginBottom="12dp"
-                android:background="#d9d9d9"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="裁剪区"/>
-
-        </LinearLayout>
+            android:layout_marginBottom="12dp"
+            android:onClick="goFontMetricsActivity"
+            android:text="FontMetrics"
+            android:textAllCaps="false"/>
 
     </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="12dp"
-            android:layout_marginRight="12dp"
-            android:gravity="center"
-            android:orientation="vertical">
-
-            <sample.kingja.canvas.INTERSECT_CanvasView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_marginBottom="12dp"
-                android:background="#d9d9d9"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="INTERSECT"/>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="12dp"
-            android:layout_marginRight="12dp"
-            android:gravity="center"
-            android:orientation="vertical">
-
-            <sample.kingja.canvas.DIFFERENCE_CanvasView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_marginBottom="12dp"
-                android:background="#d9d9d9"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="DIFFERENCE"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="12dp"
-            android:gravity="center"
-            android:orientation="vertical">
-
-            <sample.kingja.canvas.REVERSE_DIFFERENCE_CanvasView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_marginBottom="12dp"
-                android:background="#d9d9d9"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="REVERSE_DIFF."/>
-        </LinearLayout>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="12dp"
-            android:layout_marginRight="12dp"
-            android:gravity="center"
-            android:orientation="vertical">
-
-            <sample.kingja.canvas.REPLACE_CanvasView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_marginBottom="12dp"
-                android:background="#d9d9d9"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="REPLACE"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="12dp"
-            android:layout_marginRight="12dp"
-            android:gravity="center"
-            android:orientation="vertical">
-
-            <sample.kingja.canvas.UNION_CanvasView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_marginBottom="12dp"
-                android:background="#d9d9d9"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="UNION"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="12dp"
-            android:gravity="center"
-            android:orientation="vertical">
-
-            <sample.kingja.canvas.XOR_CanvasView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_marginBottom="12dp"
-                android:background="#d9d9d9"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="XOR"/>
-        </LinearLayout>
-
-    </LinearLayout>
-
-
-</LinearLayout>
+</ScrollView>

@@ -1,4 +1,4 @@
-package sample.kingja.canvas;
+package sample.kingja.canvas.clip;
 
 import android.content.Context;
 import android.graphics.Canvas;
@@ -14,21 +14,21 @@ import android.view.View;
  * Author:KingJA
  * Email:kingjavip@gmail.com
  */
-public class DIFFERENCE_CanvasView extends View {
+public class ClipCanvasView extends View {
     private static final String TAG = "CanvasView";
     private int size;
     private Paint circlePaint;
     private Paint clipPaint;
 
-    public DIFFERENCE_CanvasView(Context context) {
+    public ClipCanvasView(Context context) {
         this(context, null);
     }
 
-    public DIFFERENCE_CanvasView(Context context, @Nullable AttributeSet attrs) {
+    public ClipCanvasView(Context context, @Nullable AttributeSet attrs) {
         this(context, attrs, 0);
     }
 
-    public DIFFERENCE_CanvasView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
+    public ClipCanvasView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         initCanvasView();
     }
@@ -52,7 +52,5 @@ public class DIFFERENCE_CanvasView extends View {
     @Override
     protected void onDraw(Canvas canvas) {
         canvas.drawRect(0,0,0.5f*size,0.5f*size, clipPaint);
-        canvas.clipRect(0,0,0.5f*size,0.5f*size, Region.Op.DIFFERENCE);//在绘图之前调用
-        canvas.drawCircle(0.5f*size,0.5f*size,0.5f*size,circlePaint);
     }
 }

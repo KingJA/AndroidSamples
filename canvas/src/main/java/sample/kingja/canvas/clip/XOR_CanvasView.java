@@ -1,4 +1,4 @@
-package sample.kingja.canvas;
+package sample.kingja.canvas.clip;
 
 import android.content.Context;
 import android.graphics.Canvas;
